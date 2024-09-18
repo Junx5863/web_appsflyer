@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirección a la App</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%; /* Garantiza que todas las tarjetas tengan el mismo tamaño */
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px); /* Efecto hover para hacer más interactiva la tarjeta */
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+      flex-grow: 1; /* Hace que la tarjeta crezca proporcionalmente sin cambiar de tamaño */
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+      height: 50px; /* Altura fija para evitar que el texto largo cambie el tamaño de la tarjeta */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #007BFF;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: #0056b3; /* Efecto hover en el botón */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Tarjeta 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1536150794560-43f988aec18e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen 1">
+      <div class="card-body">
+        <div class="title">Link directo</div>
+        <a href="https://pruebalinks.onelink.me/EKRI/w7459fjo" target="_blank">Abrir App</a>
+      </div>
+    </div>
+    
+    <!-- Tarjeta 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1704144269819-23f35425126f?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen 2">
+      <div class="card-body">
+        <div class="title">Link con deep_link, con fuente de medios y nombre de la campala.</div>
+        <a href="https://pruebalinks.onelink.me/EKRI?af_xp=app&pid=web_app&c=ferrari&deep_link_value=pruebas_mejoradas" target="_blank">Abrir App</a>
+      </div>
+    </div>
+
+    <!-- Agrega más tarjetas según sea necesario -->
+  </div>
+</body>
+</html>
